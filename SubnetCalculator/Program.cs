@@ -10,13 +10,14 @@ namespace SubnetCalculator
     {
         static void Main(string[] args)
         {
-            bool verboseMode = AppUI.GetVerboseMode();
-            SubnetCalculator calculator = AppUI.InitializeCalculator(verboseMode);
-
-            if (calculator != null)
+            AppUI.DisplayHeader();
+            bool showVerboseOutput = AppUI.GetVerboseMode();
+            SubnetCalculator calculator = AppUI.InitializeCalculator(showVerboseOutput);
+            if (calculator == null)
             {
-                calculator.DisplaySubnets(verboseMode);
+                Console.WriteLine($"(!) Something went horribly wrong please try again (!)");
             }
+            calculator.DisplaySubnets(showVerboseOutput);
         }
     }
 }

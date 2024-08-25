@@ -59,12 +59,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppUI.cs" />
+    <Compile Include="UserInterface\AppUI.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="UserInterface\Prompts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Subnet.cs" />
-    <Compile Include="SubnetCalculator.cs" />
-    <Compile Include="SubnetUtils.cs" />
+    <Compile Include="Subnetting\Subnet.cs" />
+    <Compile Include="Subnetting\SubnetCalculator.cs" />
+    <Compile Include="Subnetting\SubnetUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
