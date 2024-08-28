@@ -118,6 +118,7 @@ namespace SubnetCalculator
                 if (CidrRegex.IsMatch(cidrNotation) == false)
                 {
                     Prompts.Error("The IP Address provided is not in CIDR notation. Please try again.");
+                    continue;
                 }
                 string[] parts = cidrNotation.Split('/');
                 string ipAddress = parts[0];
